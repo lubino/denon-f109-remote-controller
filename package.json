@@ -1,0 +1,20 @@
+{
+  "name": "denon-f109-remote-controller",
+  "description": "App for controlling Denon DRA-F109 HIFI audio amplifier",
+  "version": "0.1.0",
+  "keywords": "denon f109 remote connector",
+  "license": "(MIT OR Apache-2.0)",
+  "dependencies": {
+    "serialport": "^4.0.1"
+  },
+  "main": "main.js",
+  "author": {
+    "name": "Lubos Strapko",
+    "email": "lubino@gmail.com",
+    "url": "https://s.gravatar.com/avatar/fb53f16183c03329165d341174a87bcb?size=496&default=retro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm/npm.git"
+  }
+}
