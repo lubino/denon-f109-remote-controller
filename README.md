@@ -11,6 +11,10 @@ This is only low-level library. You can look at [yamaha-audio-polyfill](https://
 
 Anyway, this is small example of usage:
 
+```shell
+npm install denon-f109-remote-controller --save
+```
+
 ```javascript
 var denon = require("denon-f109-remote-controller");
 var allCommands = denon.Commands.getAllCodes();
