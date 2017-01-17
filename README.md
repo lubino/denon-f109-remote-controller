@@ -3,7 +3,7 @@
 This is source code for NPM package *denon-f109-remote-controller* written in JavaScript version 6 (ECMAScript 2015).
 The package uses serial communication protocol to control [Denon DRA-F109 amplifier](https://www.denon.co.uk/uk/product/compactsystem/mini/df109dab).
 It is based on Kamil Figiela's [hacking](http://kfigiela.github.io/2014/06/15/denon-remote-connector/) and [serialport](https://github.com/EmergingTechnologyAdvisors/node-serialport) NPM package.
-Thank you Kamil Figiela and Francis Gulotta for this contribution. Those guys helped me a lot solving many small issues.
+Thank you [Kamil Figiela](http://kfigiela.github.io) and [Francis Gulotta](https://github.com/reconbot) for this contribution. Those guys helped me a lot with solving many small issues.
 
 ## Getting Started
 
@@ -31,6 +31,7 @@ controller.sendCommand(allCommands.powerOn.code[0], function (result) {
 
 If you want to get this working, you need to have TTL RS-232 connected to 3.8mm jack connector.
 ![RS-232 to jack connector](http://kfigiela.github.io/img/2014-06-15-denon-remote-connector_circuit.png)
+
 The RX signal is not connected on this scheme but I am sure, you can see where it goes, there is only one not connected part.
 
 ### Available commands
