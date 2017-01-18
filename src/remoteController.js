@@ -133,7 +133,12 @@ function RemoteController(options) {
         }
     }
 
-    function sendCommand(code, cb) {
+    function sendCommand(command, value, cb) {
+        if (typeof value == 'function') {
+            cb = value;
+            value = 0;
+        }
+        var code = (command && command.code && command.code[value]) || command;
         poolOfRequests.push(new Request(toString(commands.hexToByteArray(code)), port, cb));
         doPooledCommunication();
     }

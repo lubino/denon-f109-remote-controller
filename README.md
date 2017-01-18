@@ -17,14 +17,14 @@ npm install denon-f109-remote-controller --save
 
 ```javascript
 var denon = require("denon-f109-remote-controller");
-var allCommands = denon.Commands.getAllCodes();
+var commands = denon.getCommands();
 
-var controller = denon.RemoteController.createController();
+var controller = denon.createController();
 
-controller.sendCommand(allCommands.powerOn.code[0], function (result) {
+controller.sendCommand(commands.powerOn, function (result) {
   console.log("Amplifier should be turned on", result);
 
-  controller.sendCommand(allCommands.volume.code[10], function (result) {
+  controller.sendCommand(commands.volume, 10, function (result) {
     console.log("Amplifier's volume level should be changed", result);
   });
 
