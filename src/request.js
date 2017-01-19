@@ -59,7 +59,14 @@ function Request(code, port, onEndRequest) {
             if (expectedReaction == reaction) {
                 successful = true;
             } else {
-                var index = expectedReaction.indexOf("-");
+                var index = expectedReaction.indexOf("*");
+                if (index>0) {
+                    if (reaction.substring(0, index) == expectedReaction.substring(0, index)) {
+                        successful = true;
+                    }
+                    return;
+                }
+                index = expectedReaction.indexOf("-");
                 if (index>0 && cutFromString(reaction, index-2, 2)==cutFromString(expectedReaction, index-2,5)) {
                     var interval = expectedReaction.substring(index-2, index+3).split('-');
                     var value = parseInt(reaction.substring(index-3, index));
